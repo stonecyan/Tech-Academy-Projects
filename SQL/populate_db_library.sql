@@ -151,7 +151,7 @@ Populating Tables
 	('Eileen Glover', '634 N. Penn Ave., North Canton, OH 44720', '(317)693-8834'),
 	('Holly Perkins', '8488 3rd Lane, Des Moines, IA 50310', '(716)897-1184'),
 	('Genevieve Bridges', '7810 Lake View Rd., Bay City, MI 48706', '(734)344-2179'),
-	('Irvin Roy', '9860 Golden Star St., Paducah, KY 42001', '(205)452-2515');
+	('Irvin Roy', '9860 Golden Star St., Paducah, KY 42001', '(205)452-2515'),
 	('Shinji Kagawa','123 Blue Lane, Seattle, WA 30021','(123)456-7890');
 
 	SELECT * FROM tbl_borrower
