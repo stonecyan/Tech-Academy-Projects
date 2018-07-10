@@ -1,4 +1,5 @@
 USE [db_library]
+USE [master]
 GO
 
 /*Copies of book "The Lost Tribe" owned by "Sharpstown"*/
@@ -35,14 +36,14 @@ INNER JOIN tbl_book_loans ON tbl_book.BookId=tbl_book_loans.BookId
 INNER JOIN tbl_borrower ON tbl_borrower.CardNo=tbl_book_loans.CardNo
 INNER JOIN tbl_library_branch ON tbl_library_branch.BranchId=tbl_book_loans.BranchID
 WHERE tbl_library_branch.BranchName='Sharpstown'
-AND DueDate='2018-07-06'
+AND DueDate=CONVERT(date,GETDATE())
 GO
 
 
 /*For each library branch, branch name and total number of books loaned from that branch*/
 CREATE PROCEDURE dbo.name_books
 AS
-SELECT tbl_library_branch.BranchName, Count(*) FROM tbl_book_loans
+SELECT tbl_library_branch.BranchName, Count(*) AS 'Books loaned' FROM tbl_book_loans
 INNER JOIN tbl_library_branch ON tbl_library_branch.BranchId=tbl_book_loans.BranchID
 GROUP BY tbl_library_branch.BranchName
 GO
@@ -58,6 +59,7 @@ GO
 
 /*Book authored by Stephen King, title, number of copies owned by Central*/
 CREATE PROCEDURE dbo.stephenking
+AS
 SELECT tbl_book.Title, tbl_book_copies.No_Of_Copies FROM tbl_book
 INNER JOIN tbl_book_copies ON tbl_book.BookId=tbl_book_copies.BookId
 INNER JOIN tbl_book_authors ON tbl_book.BookId=tbl_book_authors.BookId
