@@ -22,11 +22,11 @@ namespace ArrayListLoop
             }
 
 
-            //Infinite loop//
-            //for (; ; )
-            //{
-
-            //}
+            ////Infinite loop//
+            ////for (int i=0;i<10;i-- )
+            ////{
+            //    Console.WriteLine("This is an infinite loop.");
+            ////}
 
             //5//
             Console.WriteLine("Give me a number.");
