@@ -12,7 +12,7 @@ namespace Except
         {
             try
             {
-                List<double> x = new List<double>();
+                List<int> x = new List<int>();
                 x.Add(4);
                 x.Add(23);
                 x.Add(30);
@@ -20,16 +20,11 @@ namespace Except
                 x.Add(2500);
 
                 Console.WriteLine("Input a number.");
-                double n = Convert.ToDouble(Console.ReadLine());
+                int n = Convert.ToInt32(Console.ReadLine());
 
-                foreach (double num in x)
+                foreach (int num in x)
                 {
-                    if (n==0)
-                    {
-                        Console.WriteLine("Dvision by zero is not possible.");
-                        break;
-                    }
-                    double divide = num / n;
+                    int divide = num / n;
                     Console.WriteLine(divide);
                 }
             }
@@ -37,6 +32,10 @@ namespace Except
             catch (FormatException ex)
             {
                 Console.WriteLine("Program only accepts numbers.");
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Divsion by zero is not possible.");
             }
             catch (Exception ex)
             {

@@ -24,7 +24,7 @@ namespace ArrayLists
             }
             Console.WriteLine("Select another index of the integer array from 0-4.");
             int intindex = Convert.ToInt32(Console.ReadLine());
-            if (intindex >= array2.Length||stringindex<0)
+            if (intindex >= array2.Length||intindex<0)
             {
                 Console.WriteLine("Selected index does not exist.");
             }
