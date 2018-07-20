@@ -12,9 +12,9 @@ namespace ArrayLists
         {
             string[] array1 = new string[] { "My", "name", "is", "Stone", "Yan" };
             int[] array2 = new int[] { 1, 2, 3, 4, 5 };
-            Console.WriteLine("Select an index of the string array from 0-5.");
+            Console.WriteLine("Select an index of the string array from 0-4.");
             int stringindex = Convert.ToInt32(Console.ReadLine());
-            if (stringindex>array1.Length)
+            if (stringindex>=array1.Length || stringindex<0)
             {
                 Console.WriteLine("Selected index does not exist.");
             }
@@ -22,9 +22,9 @@ namespace ArrayLists
             {
                 Console.WriteLine(array1[stringindex]);
             }
-            Console.WriteLine("Select another index of the integer array from 0-5.");
+            Console.WriteLine("Select another index of the integer array from 0-4.");
             int intindex = Convert.ToInt32(Console.ReadLine());
-            if (intindex > array2.Length)
+            if (intindex >= array2.Length||stringindex<0)
             {
                 Console.WriteLine("Selected index does not exist.");
             }
