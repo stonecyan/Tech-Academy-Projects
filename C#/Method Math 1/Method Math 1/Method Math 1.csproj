@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7A62C858-2FB7-4A70-A791-C5F345DAA35C}</ProjectGuid>
+    <ProjectGuid>{4558F8DC-62C3-4361-8CAC-B8D471CF2EFC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Method_Math_Operations</RootNamespace>
-    <AssemblyName>Method Math Operations</AssemblyName>
+    <RootNamespace>Method_Math_1</RootNamespace>
+    <AssemblyName>Method Math 1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
