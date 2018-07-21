@@ -10,6 +10,10 @@ namespace Method_Math
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(Math_Operation.Math(12));
+            Console.WriteLine(Math_Operation.Math(12.5));
+            Console.WriteLine(Math_Operation.Math("13950"));
+            Console.ReadLine();
             
         }
     }
