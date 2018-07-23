@@ -15,8 +15,9 @@ namespace Interfaces
 
         public void Quit()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Employee Quits.");
         }
+
 
         
     }
