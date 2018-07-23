@@ -23,9 +23,10 @@ namespace Operator_Overload
 
         public static bool operator!=(Employee lhs, Employee rhs)
         {
-            bool status = lhs == rhs;
+            bool status = lhs != rhs;
             return status;
         }
-        
+
+
     }
 }
