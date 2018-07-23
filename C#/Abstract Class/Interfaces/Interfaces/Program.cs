@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Abstract_Class
+namespace Interfaces
 {
-    class Employee : Person 
+    class Program
     {
-        public override void SayName()
+        static void Main(string[] args)
         {
-            base.SayName();
+            IQuittable x = new Employee();
+            x.Quit();
         }
     }
 }

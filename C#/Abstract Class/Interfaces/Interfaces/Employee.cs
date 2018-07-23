@@ -4,13 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Abstract_Class
+namespace Interfaces
 {
-    class Employee : Person 
+    class Employee:Person, IQuittable
     {
         public override void SayName()
         {
             base.SayName();
         }
+
+        public void Quit()
+        {
+            throw new NotImplementedException();
+        }
+
+        
     }
 }
