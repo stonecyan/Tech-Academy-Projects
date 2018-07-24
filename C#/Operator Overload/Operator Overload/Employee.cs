@@ -17,13 +17,13 @@ namespace Operator_Overload
 
         public static bool operator==  (Employee lhs, Employee rhs)
         {
-            bool status = lhs == rhs;
+            bool status = lhs.Id == rhs.Id;
             return status;
         }
 
         public static bool operator!=(Employee lhs, Employee rhs)
         {
-            bool status = lhs != rhs;
+            bool status = lhs.Id != rhs.Id;
             return status;
         }
 

@@ -28,6 +28,8 @@ namespace Operator_Overload
             person2.SayName();
 
             bool compare = person1 == person2;
+            Console.WriteLine(compare);
+            Console.ReadLine();
 
         }
     }
