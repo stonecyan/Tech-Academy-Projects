@@ -8,6 +8,7 @@ namespace Interfaces
 {
     interface IQuittable
     {
-        void Quit();
+        void Quit(IQuittable employee);
+
     }
 }

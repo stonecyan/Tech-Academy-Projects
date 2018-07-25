@@ -13,12 +13,10 @@ namespace Interfaces
             base.SayName();
         }
 
-        public void Quit()
+        public void Quit(IQuittable employee)
         {
             Console.WriteLine("Employee Quits.");
         }
 
-
-        
     }
 }

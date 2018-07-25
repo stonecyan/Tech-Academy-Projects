@@ -11,7 +11,7 @@ namespace Interfaces
         static void Main(string[] args)
         {
             IQuittable x = new Employee();
-            x.Quit();
+            x.Quit(x);
         }
     }
 }
