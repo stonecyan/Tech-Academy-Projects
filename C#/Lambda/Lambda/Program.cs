@@ -48,7 +48,14 @@ namespace Lambda
             {
                 Console.WriteLine(x.FirstName);
             }
-        
+
+            var five = employees.Where(x => x.Id > 5);
+
+            foreach (Employee y in five)
+            {
+                Console.WriteLine(y.FirstName);
+            }
+
             Console.ReadLine();
         }
     }
