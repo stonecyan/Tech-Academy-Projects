@@ -13,13 +13,20 @@ namespace TwentyOne
 
 
             Deck deck = new Deck();
-            deck.Shuffle();
 
-            foreach (Card card in deck.Cards)
-            {
-                Console.WriteLine(card.Face + " of " + card.Suit);
-            }
-            Console.WriteLine(deck.Cards.Count);
+            //int count = deck.Cards.Count(x => x.Face == Face.Ace);
+
+            List<int> numberList = new List<int> { 1, 2, 3, 4, 5, 6, 23 };
+            int sum = numberList.Max();
+
+            Console.WriteLine(sum);            
+            //deck.Shuffle();
+
+            //foreach (Card card in deck.Cards)
+            //{
+            //    Console.WriteLine(card.Face + " of " + card.Suit);
+            //}
+            //Console.WriteLine(deck.Cards.Count);
             Console.ReadLine();
         }
         //public static Deck Shuffle(Deck deck)
