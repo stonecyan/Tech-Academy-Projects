@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace TwentyOne
 {
@@ -10,65 +11,28 @@ namespace TwentyOne
     {
         static void Main(string[] args)
         {
-
-
-            Deck deck = new Deck();
-
-            //int count = deck.Cards.Count(x => x.Face == Face.Ace);
-
-            List<int> numberList = new List<int> { 1, 2, 3, 4, 5, 6, 23 };
-            int sum = numberList.Max();
-
-            Console.WriteLine(sum);            
-            //deck.Shuffle();
-
-            //foreach (Card card in deck.Cards)
-            //{
-            //    Console.WriteLine(card.Face + " of " + card.Suit);
-            //}
-            //Console.WriteLine(deck.Cards.Count);
+            Console.WriteLine("Welcome to the Casino. Let's start by telling me your name.");
+            string playerName = Console.ReadLine();
+            Console.WriteLine("How much money did you bring today?");
+            int bank = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Hello, {0}. Would you like to join a game of 21 right now?", playerName);
+            string answer = Console.ReadLine().ToLower();
+            if (answer == "yes"|| answer == "yeah" || answer=="yea" || answer== "y") ;
+            {
+                Player player = new Player(playerName,bank);
+                Game game = new TwentyOneGame();
+                game += player;
+                player.isActivelyPlaying = true;
+                while(player.isActivelyPlaying && player.Balance>0)
+                {
+                    game.Play();
+                }
+                game -= player;
+                Console.WriteLine("Thank you for playing!");
+            }
+            Console.WriteLine("Good bye!");
             Console.ReadLine();
+
         }
-        //public static Deck Shuffle(Deck deck)
-        //{
-        //    List<Card> TempList = new List<Card>();
-        //    Random random = new Random();
-
-        //    while (deck.Cards.Count > 0)
-        //    {
-        //        int randomIndex = random.Next(0, deck.Cards.Count);
-        //        TempList.Add(deck.Cards[randomIndex]);
-        //        deck.Cards.RemoveAt(randomIndex);
-        //    }
-        //    deck.Cards = TempList;
-        //    return deck;
-        //}
-        //public static Deck Shuffle(Deck deck, int times)
-        //{
-        //    for (int i = 0; i < times; i++)
-        //    {
-        //        deck = Shuffle(deck);
-        //    }
-        //    return deck;
-        //}
-        //public Deck Shuffle(Deck deck, out int timesShuffled, int times=1)
-        //{
-        //    timesShuffled = 0;
-        //    for (int i = 0; i < times; i++)
-        //    {
-        //        timesShuffled++;
-        //        List<Card> TempList = new List<Card>();
-        //        Random random = new Random();
-
-        //        while (deck.Cards.Count > 0)
-        //        {
-        //            int randomIndex = random.Next(0, deck.Cards.Count);
-        //            TempList.Add(deck.Cards[randomIndex]);
-        //            deck.Cards.RemoveAt(randomIndex);
-        //        }
-        //        deck.Cards = TempList;
-        //    }
-        //    return deck;
-        //}
     }
 }
