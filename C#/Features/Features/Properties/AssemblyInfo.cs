@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DateTime")]
+[assembly: AssemblyTitle("Features")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("TEAM OS")]
-[assembly: AssemblyProduct("DateTime")]
+[assembly: AssemblyProduct("Features")]
 [assembly: AssemblyCopyright("Copyright © TEAM OS 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("09269bb2-350b-4c6d-92b0-2a4a8d3aa0f7")]
+[assembly: Guid("a2384c23-a71a-4b05-a786-69db6385f7e4")]
 
 // Version information for an assembly consists of the following four values:
 //
